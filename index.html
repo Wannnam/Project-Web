@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jelajah Cilegon | Beranda</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --biru-tua: #0b3d5c;
+    --biru-laut: #1f7a99;
+    --krem: #f6f1e7;
+    --krem-tua: #e9e0cc;
+    --karang: #d9782f;
+    --teks-gelap: #24291f;
+    --putih: #ffffff;
+    --radius: 10px;
+  }
+
+  body {
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    color: var(--teks-gelap);
+    background-color: var(--krem);
+    line-height: 1.6;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+
+  header {
+    background-color: var(--biru-tua);
+    color: var(--putih);
+    padding: 18px 40px;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo { font-size: 22px; font-weight: bold; letter-spacing: 0.5px; }
+  .logo span { color: var(--karang); }
+
+  nav ul { display: flex; gap: 28px; }
+
+  nav a {
+    font-size: 15px;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  nav a:hover, nav a.aktif { border-color: var(--karang); }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .hero-teks { flex: 1 1 380px; }
+
+  .hero-teks h1 {
+    font-size: 40px;
+    color: var(--biru-tua);
+    margin-bottom: 16px;
+  }
+
+  .hero-teks p {
+    font-size: 17px;
+    margin-bottom: 26px;
+    max-width: 46ch;
+  }
+
+  .hero-gambar { flex: 1 1 320px; }
+  .hero-gambar img { border-radius: var(--radius); }
+
+  .tombol-grup { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .tombol {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .tombol-utama { background-color: var(--karang); color: var(--putih); }
+  .tombol-utama:hover { background-color: #b0631f; }
+
+  .tombol-sekunder {
+    background-color: transparent;
+    color: var(--biru-tua);
+    border: 2px solid var(--biru-tua);
+  }
+
+  .tombol-sekunder:hover { background-color: var(--biru-tua); color: var(--putih); }
+
+  .fakta { background-color: var(--krem-tua); padding: 50px 40px; }
+  .fakta-inner { max-width: 1100px; margin: 0 auto; }
+  .fakta h2 { color: var(--biru-tua); margin-bottom: 24px; font-size: 26px; }
+
+  .fakta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .fakta-item {
+    background-color: var(--putih);
+    padding: 22px;
+    border-left: 4px solid var(--karang);
+    border-radius: 6px;
+  }
+
+  .fakta-item h3 { font-size: 17px; color: var(--biru-tua); margin-bottom: 6px; }
+  .fakta-item p { font-size: 14px; }
+
+  .tim { max-width: 1100px; margin: 0 auto; padding: 50px 40px; }
+  .tim h2 { color: var(--biru-tua); margin-bottom: 24px; font-size: 26px; }
+
+  .tim-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .tim-item {
+    background-color: var(--putih);
+    padding: 22px;
+    border-radius: var(--radius);
+    border: 1px solid var(--krem-tua);
+    text-align: center;
+  }
+
+  .tim-item h3 { color: var(--biru-tua); margin-bottom: 4px; }
+  .tim-item p { font-size: 14px; color: var(--karang); font-weight: 600; }
+
+  footer {
+    background-color: var(--biru-tua);
+    color: var(--krem-tua);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 16px 20px; }
+    nav ul { gap: 16px; }
+    .hero, .fakta, .tim { padding: 40px 20px; }
+    .hero-teks h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">Jelajah <span>Cilegon</span></div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="aktif">Beranda</a></li>
+          <li><a href="wisata.html">Wisata</a></li>
+          <li><a href="kuliner.html">Kuliner</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-teks">
+      <h1>Jelajah Wisata &amp; Kuliner Kota Cilegon</h1>
+      <p>
+        Dikenal sebagai kota baja, Cilegon juga menyimpan pulau-pulau kecil
+        di Selat Sunda, danau kota yang teduh, hingga kuliner khas pesisir
+        yang jarang dilirik wisatawan.
+      </p>
+      <div class="tombol-grup">
+        <a href="wisata.html" class="tombol tombol-utama">Lihat Wisata</a>
+        <a href="kuliner.html" class="tombol tombol-sekunder">Lihat Kuliner</a>
+      </div>
+    </div>
+    <div class="hero-gambar">
+      <img src="image/" alt="Ilustrasi wisata dan kuliner Kota Cilegon">
+    </div>
+  </section>
+
+  <section class="fakta">
+    <div class="fakta-inner">
+      <h2>Sekilas Kota Cilegon</h2>
+      <div class="fakta-grid">
+        <div class="fakta-item">
+          <h3>Judul</h3>
+          <p>...</p>
+        </div>
+        <div class="fakta-item">
+          <h3>Judul</h3>
+          <p>...</p>
+        </div>
+        <div class="fakta-item">
+          <h3>Judul</h3>
+          <p>...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tim">
+    <h2>Tim Penyusun</h2>
+    <div class="tim-grid">
+      <div class="tim-item">
+        <h3>[Nama Anggota 1]</h3>
+        <p>Halaman Wisata</p>
+      </div>
+      <div class="tim-item">
+        <h3>[Nama Anggota 2]</h3>
+        <p>Halaman Kuliner</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Halaman Kolaborasi - Jelajah Wisata & Kuliner Kota Cilegon</p>
+    <p>Dibuat bersama oleh: [Nama Anggota 1] & [Nama Anggota 2]</p>
+  </footer>
+
+</body>
+</html>
 
