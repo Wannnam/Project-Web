@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wisata Cilegon</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --biru-tua: #0b3d5c;
+    --biru-laut: #1f7a99;
+    --krem: #f6f1e7;
+    --krem-tua: #e9e0cc;
+    --karang: #d9782f;
+    --teks-gelap: #24291f;
+    --putih: #ffffff;
+    --radius: 10px;
+  }
+
+  body {
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    color: var(--teks-gelap);
+    background-color: var(--krem);
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+
+  header {
+    background-color: var(--biru-tua);
+    color: var(--putih);
+    padding: 18px 40px;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo { font-size: 22px; font-weight: bold; }
+  .logo span { color: var(--karang); }
+
+  .konten {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px;
+  }
+
+  .konten-judul {
+    margin-bottom: 10px;
+    color: var(--biru-tua);
+    font-size: 32px;
+  }
+
+  .konten-sub {
+    margin-bottom: 36px;
+    max-width: 60ch;
+    color: #4a4f43;
+  }
+
+  .kartu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+    margin-bottom: 46px;
+  }
+
+  .kartu {
+    background-color: var(--putih);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--krem-tua);
+  }
+
+  .kartu img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .kartu-isi { padding: 18px; }
+  .kartu-isi h3 { color: var(--biru-tua); margin-bottom: 8px; font-size: 19px; }
+  .kartu-isi p { font-size: 14px; margin-bottom: 10px; }
+  .kartu-isi .info { font-size: 13px; color: var(--karang); font-weight: 600; }
+
+  .kotak-info {
+    background-color: var(--krem-tua);
+    padding: 26px 30px;
+    border-radius: var(--radius);
+  }
+
+  .kotak-info h3 { color: var(--biru-tua); margin-bottom: 12px; }
+
+  .kotak-info ul li {
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  .kotak-info ul li::before {
+    content: "•";
+    color: var(--karang);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+
+  footer {
+    background-color: var(--biru-tua);
+    color: var(--krem-tua);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 16px 20px; }
+    .konten { padding: 40px 20px; }
+    .konten-judul { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">Jelajah <span>Cilegon</span></div>
+    </div>
+  </header>
+
+  <main class="konten">
+    <h1 class="konten-judul">Destinasi Wisata Cilegon</h1>
+    <p class="konten-sub">
+      Dari pulau kecil di Selat Sunda sampai kolam air buatan, berikut destinasi
+      yang mewakili sisi bahari dan rekreasi Kota Cilegon.
+    </p>
+
+    <div class="kartu-grid">
+
+      <!-- Wisata 1 -->
+      <article class="kartu">
+        <img src="image/pulau-merak-kecil.webp" alt="Suasana Pulau Merak Kecil">
+        <div class="kartu-isi">
+          <h3>Pulau Merak Kecil</h3>
+          <p>
+            Pulau mungil dengan waktu penyeberangan singkat, populer untuk snorkeling
+            ringan dan menikmati pemandangan Selat Sunda.
+          </p>
+          <p class="info">Kec. Pulomerak</p>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="image/pulau-merak-besar.jpg" alt="Suasana Pulau Merak Besar">
+        <div class="kartu-isi">
+          <h3>Pulau Merak Besar</h3>
+          <p>
+            Menawarkan panorama laut lepas serta pemandangan ke arah situs
+            sejarah letusan Krakatau 1883.
+          </p>
+          <p class="info">Desa Tamansari, Pulomerak</p>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="image/situ-rawa-arum.webp" alt="Suasana Situ Rawa Arum">
+        <div class="kartu-isi">
+          <h3>Situ Rawa Arum</h3>
+          <p>
+            Danau kota yang teduh, cocok untuk bersantai sore hari, memancing,
+            atau sekadar berjalan santai di tepiannya.
+          </p>
+          <p class="info">Kota Cilegon</p>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="image/Cilegon-Green-Waterpark.jpg" alt="Suasana Green Waterpark Cilegon">
+        <div class="kartu-isi">
+          <h3>Green Waterpark</h3>
+          <p>
+            Wahana air lengkap untuk keluarga, mulai dari kolam arus hingga
+            berbagai jenis seluncuran.
+          </p>
+          <p class="info">Jl. Ahmad Yani, Cibeber</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="kotak-info">
+      <h3>Tips Berkunjung</h3>
+      <ul>
+        <li>Untuk menyeberang ke Pulau Merak, cek dulu jadwal perahu nelayan setempat.</li>
+        <li>Datang pagi hari agar tidak terlalu terik saat berada di area pulau atau danau.</li>
+        <li>Siapkan uang tunai karena sebagian lokasi belum mendukung pembayaran non-tunai.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Halaman Wisata & Jelajah Cilegon</p>
+    <p>Dibuat oleh: [Nama Anggota 1] & [Nama Anggota 2]</p>
+  </footer>
+
+</body>
+</html>
+
