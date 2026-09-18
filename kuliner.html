@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuliner Cilegon</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --biru-tua: #0b3d5c;
+    --biru-laut: #1f7a99;
+    --krem: #f6f1e7;
+    --krem-tua: #e9e0cc;
+    --karang: #d9782f;
+    --teks-gelap: #24291f;
+    --putih: #ffffff;
+    --radius: 10px;
+  }
+
+  body {
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    color: var(--teks-gelap);
+    background-color: var(--krem);
+    line-height: 1.6;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+
+  header {
+    background-color: var(--biru-tua);
+    color: var(--putih);
+    padding: 18px 40px;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo { font-size: 22px; font-weight: bold; }
+  .logo span { color: var(--karang); }
+
+  nav ul { display: flex; gap: 28px; }
+  nav a {
+    font-size: 15px;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  nav a:hover, nav a.aktif { border-color: var(--karang); }
+
+  .konten {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px;
+  }
+
+  .konten-judul {
+    margin-bottom: 10px;
+    color: var(--biru-tua);
+    font-size: 32px;
+  }
+
+  .konten-sub {
+    margin-bottom: 36px;
+    max-width: 60ch;
+    color: #4a4f43;
+  }
+
+  .kartu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+    margin-bottom: 46px;
+  }
+
+  .kartu {
+    background-color: var(--putih);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--krem-tua);
+  }
+
+  .kartu img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .kartu-isi { padding: 18px; }
+  .kartu-isi h3 { color: var(--biru-tua); margin-bottom: 8px; font-size: 19px; }
+  .kartu-isi p { font-size: 14px; margin-bottom: 10px; }
+  .kartu-isi .info { font-size: 13px; color: var(--karang); font-weight: 600; }
+
+  .kotak-info {
+    background-color: var(--krem-tua);
+    padding: 26px 30px;
+    border-radius: var(--radius);
+  }
+
+  .kotak-info h3 { color: var(--biru-tua); margin-bottom: 12px; }
+
+  .kotak-info ul li {
+    margin-bottom: 8px;
+    padding-left: 18px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  .kotak-info ul li::before {
+    content: "•";
+    color: var(--karang);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+
+  footer {
+    background-color: var(--biru-tua);
+    color: var(--krem-tua);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 16px 20px; }
+    nav ul { gap: 16px; }
+    .konten { padding: 40px 20px; }
+    .konten-judul { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">Jelajah <span>Cilegon</span></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="wisata.html">Wisata</a></li>
+          <li><a href="kuliner.html" class="aktif">Kuliner</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="konten">
+    <h1 class="konten-judul">Kuliner Khas Cilegon</h1>
+    <p class="konten-sub">
+      Kota Cilegon punya cita rasa pesisir yang khas, mulai dari olahan
+      laut segar hingga jajanan tradisional Banten yang jarang ditemukan
+      di daerah lain.
+    </p>
+
+    <div class="kartu-grid">
+
+      <article class="kartu">
+        <img src="image/sate-bandeng.jpg" alt="Sate Bandeng khas Banten">
+        <div class="kartu-isi">
+          <h3>Sate Bandeng</h3>
+          <p>
+            Olahan ikan bandeng yang durinya sudah dibersihkan, dibumbui
+            rempah, lalu dibakar hingga harum. Ikon kuliner Banten.
+          </p>
+          <p class="info">Khas Banten</p>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="image/rabeg.jpg" alt="Rabeg khas Cilegon">
+        <div class="kartu-isi">
+          <h3>Rabeg</h3>
+          <p>
+            Gulai kambing dengan bumbu khas Cilegon yang kaya rempah.
+            Biasanya disajikan saat acara adat atau hari besar.
+          </p>
+          <p class="info">Khas Cilegon</p>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="image/nasi-sumsum.jpg" alt="Nasi Sumsum khas Banten">
+        <div class="kartu-isi">
+          <h3>Nasi Sumsum</h3>
+          <p>
+            Nasi dengan kuah santan dan potongan sumsum sapi, disajikan
+            hangat dengan taburan bawang goreng.
+          </p>
+          <p class="info">Khas Banten</p>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="image/kue-cucur.jpg" alt="Kue Cucur khas Banten">
+        <div class="kartu-isi">
+          <h3>Kue Cucur</h3>
+          <p>
+            Jajanan tradisional berbahan tepung beras dan gula merah,
+            bertekstur lembut di tengah dan renyah di pinggir.
+          </p>
+          <p class="info">Jajanan Pasar</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="kotak-info">
+      <h3>Tips Kuliner</h3>
+      <ul>
+        <li>Coba Rabeg di warung tradisional sekitar Kota Cilegon untuk rasa autentik.</li>
+        <li>Sate Bandeng paling enak disantap hangat dengan sambal kecap.</li>
+        <li>Jajanan pasar seperti Kue Cucur biasanya tersedia pagi hari di pasar tradisional.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Halaman Kuliner & Jelajah Cilegon</p>
+    <p>Dibuat oleh: Zaqi</p>
+  </footer>
+
+</body>
+</html>
