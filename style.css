@@ -38,45 +38,41 @@ ul {
 
 /* ==================== NAVBAR ==================== */
 
-header {
+.navbar-custom {
   background-color: var(--biru-tua);
+  padding: 14px 0;
+}
+
+.navbar-custom .navbar-brand {
   color: var(--putih);
-  padding: 18px 40px;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.logo {
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 0.5px;
 }
 
-.logo span {
+.navbar-custom .navbar-brand span {
   color: var(--karang);
 }
 
-nav ul {
-  display: flex;
-  gap: 28px;
-}
-
-nav a {
+.navbar-custom .nav-link {
+  color: var(--putih) !important;
   font-size: 15px;
-  padding: 6px 2px;
+  padding: 6px 2px !important;
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s ease;
 }
 
-nav a:hover,
-nav a.aktif {
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.aktif {
   border-color: var(--karang);
+}
+
+.navbar-custom .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-custom .navbar-toggler-icon {
+  filter: invert(1);
 }
 
 /* ==================== HALAMAN BERANDA ==================== */
@@ -317,37 +313,42 @@ nav a.aktif {
 footer {
   background-color: var(--biru-tua);
   color: var(--krem-tua);
-  text-align: center;
   padding: 24px 20px;
   font-size: 13px;
 }
 
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
 /* ==================== RESPONSIVE ==================== */
 
-@media (max-width: 600px) {
-  header {
-    padding: 16px 20px;
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 24px;
+    gap: 24px;
   }
+  .hero-teks h1 { font-size: 32px; }
+  .hero-teks p { font-size: 16px; }
+  .fakta, .tim { padding: 40px 24px; }
+  .konten { padding: 40px 24px; }
+  .konten-judul { font-size: 28px; }
+}
 
-  nav ul {
-    gap: 16px;
-  }
-
-  .hero,
-  .fakta,
-  .tim {
-    padding: 40px 20px;
-  }
-
-  .konten {
-    padding: 40px 20px;
-  }
-
-  .hero-teks h1 {
-    font-size: 30px;
-  }
-
-  .konten-judul {
-    font-size: 26px;
-  }
+/* HP */
+@media (max-width: 480px) {
+  .hero { padding: 36px 16px; }
+  .hero-teks h1 { font-size: 26px; }
+  .hero-teks p { font-size: 15px; }
+  .fakta, .tim { padding: 32px 16px; }
+  .fakta h2, .tim h2 { font-size: 22px; }
+  .konten { padding: 32px 16px; }
+  .konten-judul { font-size: 24px; }
+  .kartu-grid { gap: 18px; }
+  .tombol { padding: 10px 20px; font-size: 14px; }
 }
